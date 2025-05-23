@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "id": "src/screens/HomePage/HomePage.tsx",
+      "label": "HomePage",
+      "routes": [
+        "/"
+      ],
+      "isRoot": true
+    },
+    {
+      "id": "src/screens/SearchPage/SearchPage.tsx",
+      "label": "SearchPage",
+      "routes": [
+        "/search"
+      ]
+    },
+    {
+      "id": "src/screens/AppointmentsPage/AppointmentsPage.tsx",
+      "label": "AppointmentsPage",
+      "routes": [
+        "/appointments"
+      ]
+    },
+    {
+      "id": "src/screens/BookingPage/BookingPage.tsx",
+      "label": "BookingPage",
+      "routes": [
+        "/booking/:salonId"
+      ]
+    },
+    {
+      "id": "src/screens/ConfirmationPage/ConfirmationPage.tsx",
+      "label": "ConfirmationPage",
+      "routes": [
+        "/confirmation"
+      ]
+    },
+    {
+      "id": "src/screens/Chat/Chat.tsx",
+      "label": "Chat",
+      "routes": [
+        "/chat"
+      ]
+    },
+    {
+      "id": "src/screens/Profile/Profile.tsx",
+      "label": "Profile",
+      "routes": [
+        "/profile"
+      ]
+    },
+    {
+      "id": "src/screens/User.tsx",
+      "label": "User",
+      "routes": [
+        "/user"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "src/screens/AppointmentsPage/AppointmentsPage.tsx:98:35-to-src/screens/Chat/Chat.tsx",
+      "source": "src/screens/AppointmentsPage/AppointmentsPage.tsx",
+      "target": "src/screens/Chat/Chat.tsx",
+      "data": {
+        "viaRoute": "/chat",
+        "trigger": {
+          "element": "navigate('/chat')",
+          "line": 98,
+          "endLine": 98,
+          "column": 35,
+          "endColumn": 52,
+          "sourceFile": "src/screens/AppointmentsPage/AppointmentsPage.tsx"
+        }
+      }
+    },
+    {
+      "id": "src/screens/BookingPage/BookingPage.tsx:118:25-to-src/screens/ConfirmationPage/ConfirmationPage.tsx",
+      "source": "src/screens/BookingPage/BookingPage.tsx",
+      "target": "src/screens/ConfirmationPage/ConfirmationPage.tsx",
+      "data": {
+        "viaRoute": "/confirmation",
+        "trigger": {
+          "element": "navigate('/confirmation')",
+          "line": 118,
+          "endLine": 118,
+          "column": 25,
+          "endColumn": 50,
+          "sourceFile": "src/screens/BookingPage/BookingPage.tsx"
+        }
+      }
+    },
+    {
+      "id": "src/screens/ConfirmationPage/ConfirmationPage.tsx:72:6-to-src/screens/AppointmentsPage/AppointmentsPage.tsx",
+      "source": "src/screens/ConfirmationPage/ConfirmationPage.tsx",
+      "target": "src/screens/AppointmentsPage/AppointmentsPage.tsx",
+      "data": {
+        "viaRoute": "/appointments",
+        "trigger": {
+          "element": "navigate('/appointments', { state: { fromConfirmation: true } })",
+          "line": 72,
+          "endLine": 72,
+          "column": 6,
+          "endColumn": 70,
+          "sourceFile": "src/screens/ConfirmationPage/ConfirmationPage.tsx"
+        }
+      }
+    },
+    {
+      "id": "src/screens/Profile/Profile.tsx:50:8-to-src/screens/User.tsx",
+      "source": "src/screens/Profile/Profile.tsx",
+      "target": "src/screens/User.tsx",
+      "data": {
+        "viaRoute": "/user",
+        "trigger": {
+          "element": "<Link to=\"/user\">\n          <Card className=\"w-full\">\n            <CardContent className=\"flex items-center justify-between p-4\">\n              <div className=\"flex items-center\">\n                <User className=\"h-5 w-5 mr-3 text-gray-500 dark:text-gray-400\" />\n                <span className=\"text-sm font-medium\">Mon Profil</span>\n              </div>\n            </CardContent>\n          </Card>\n        </Link>",
+          "line": 50,
+          "endLine": 59,
+          "column": 8,
+          "endColumn": 15,
+          "sourceFile": "src/screens/Profile/Profile.tsx"
+        }
+      }
+    }
+  ]
+}
